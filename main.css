@@ -57,7 +57,7 @@ header .button {
 h1 {
   font-size: var(--titles-h1-size);
   font-weight: normal;
-  color: var(color-black);
+  color: var(--color-black);
 }
 
 [class*=hero] .kicker {
@@ -68,7 +68,7 @@ h1 {
  
 [class*=hero] p {
   font-size: var(--paragraph-regular-size);
-  color: var-(--color-black);
+  color: var(--color-black);
 }
 
 

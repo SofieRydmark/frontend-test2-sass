@@ -15,8 +15,8 @@
 <body>
 		<header id="site-header">
                 <a href="index.html" class="site-logo">
-                <img src="./assets/zetadisplay-logo.svg"></a>
-                <a href="index.html" class="button">Download guide</a>
+                <img src="./assets/zetadisplay-logo.svg" alt="site-logo"></a>
+                <a href="index.html" class="button">Download guide</a> 
 		</header>
 		<main>
 			<section class="text-block hero">
@@ -99,22 +99,22 @@
                 <fieldset name="input-names">
                     <fieldset name="input-firstname">
                         <label for="first-name">First name</label>
-                        <input type="text" placeholder="Sofie" class="input" name="first-name">
+                        <input type="text" placeholder="Sofie" class="input" name="first-name" id="first-name">
                     </fieldset>
                     <fieldset name="input-lastname">
                         <label for="last-name">Last name</label>
-                        <input type="text" placeholder="Rydmark" class="input" name="last-name">
+                        <input type="text" placeholder="Rydmark" class="input" name="last-name" id="last-name">
                     </fieldset>
                 </fieldset>
                 <fieldset name="input-details">
                     <label for="email">E-mail</label>
-                    <input type="email" placeholder="sofie@rydmark.se" class="input" name="email">
+                    <input type="email" placeholder="sofie@rydmark.se" class="input" name="email" id="email">
                     <label for="work">Work</label>
-                    <input type="text" placeholder="Frontend AB" class="input" name="work">
+                    <input type="text" placeholder="Frontend AB" class="input" name="work" id="work">
                 </fieldset>
                 <fieldset name="policy-check">
-                    <input type="checkbox" placeholder="Enter First" name="policy-box">
-                    <label for="policy-bbox">I have read ZetaDisplays lorem ipsum dolor sit amet</label>
+                    <input type="checkbox" name="policy-box" id="policy-box">
+                    <label for="policy-box">I have read ZetaDisplays lorem ipsum dolor sit amet</label>
                 </fieldset>
                 <button type="submit" class="button">Download guide now</button>
             </form>
