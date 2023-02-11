@@ -4,7 +4,7 @@
 section {
   align-items: center;
   justify-content: center;
-  padding: var(--padding-lg) var(--site-padding);
+  padding: var(--padding-md) var(--site-padding);
   min-height: 400px;
 }
 
@@ -81,11 +81,10 @@ h1 {
 }
 
 .text-block {
-  --gap: 3rem;
   --num-cols: 1;
   display: grid;
   grid-template-columns: repeat(var(--num-cols), 1fr);
-  gap: var(--gap);
+  gap: var(--padding-md)
 }
 
 @media (min-width: 768px) {
@@ -153,11 +152,12 @@ dd {
 #employee-module {
     display: grid;
     gap: 1.5rem;
+    text-align: center
   }
   
   @media (min-width: 768px) {
     #employee-module {
-      grid-template-columns: repeat(2, auto)
+      grid-template-columns: repeat(2, auto);
     }
 
     #employee-module h2 {
