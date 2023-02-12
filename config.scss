@@ -1,0 +1,65 @@
+@use "sass:meta";
+
+  /* Width */
+$site-width-min: 85vw;
+$site-width-max: 1360px;
+$site-width: min($site-width-min, $site-width-max);
+
+  /* Fonts */
+$font-fam: 'Roboto', sans-serif;
+
+  /* Font sizes */
+$font-size-xs: 0.88rem;
+$font-size-sm: 1.125rem;
+$font-size-regular: 2rem;
+$paragraph-regular-size: 1.13rem;
+$paragraph-lg-size: 1.31rem;
+$titles-h1-size: 3rem;
+$titles-h2-size: 2.5rem;
+$titles-h3-size: 1.8rem;
+
+  /* Colors */
+$color-bg: #fff;
+$color-black: #070707;
+$color-white: #fff;
+$color-grays-20: #f2f2f2;
+$color-grays-60: #757575;
+$color-grays-100: #151515;
+$color-primary-01: #f59200;
+
+  /* Paddings */
+$padding-sm: 0.81rem;
+$padding-md: 1.8rem;
+$padding-lg: 3rem;
+$site-padding: calc((100vw - $site-width) / 2);
+
+  /* Border radiuses */
+$border-rad-regular: 9999px;
+
+:root {
+  --site-width-min: #{$site-width-min};
+  --site-width-max: #{$site-width-max};
+  --site-width: #{$site-width};
+  --font-fam: #{meta.inspect($font-fam)};
+  --font-size-xs: #{$font-size-xs};
+  --font-size-sm: #{$font-size-sm};
+  --font-size-regular: #{$font-size-regular};
+  --paragraph-regular-size: #{$paragraph-regular-size};
+  --paragraph-lg-size: #{$paragraph-lg-size};
+  --titles-h1-size: #{$titles-h1-size};
+  --titles-h2-size: #{$titles-h2-size};
+  --titles-h3-size: #{$titles-h3-size};
+  --color-bg: #{$color-bg};
+	--color-black: #{$color-black};
+  --color-white: #{$color-white};
+  --color-grays-20: #{$color-grays-20};
+  --color-grays-60: #{$color-grays-60};
+  --color-grays-100: #{$color-grays-100};
+  --color-primary-01: #{$color-primary-01};
+  --padding-sm: #{$padding-sm};
+  --padding-md: #{$padding-md};
+  --padding-lg: #{$padding-lg};
+  --site-padding: #{$site-padding};
+  --border-rad-regular: #{$border-rad-regular};
+}
+
