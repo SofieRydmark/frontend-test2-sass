@@ -12,9 +12,10 @@
 </head>
 <body>
 		<header id="site-header">
-                <a href="index.html" class="site-logo">
+                <a href="#" class="site-logo">
                 <img src="./assets/zetadisplay-logo.svg" alt="site-logo"></a>
-                <a href="index.html" class="button">Download guide</a> 
+                 <!-- onclick download visual just for fun in this case -->
+                <a href="#" class="button" onclick="downloadPDF('header-btn')" id="header-btn">Download guide</a> 
 		</header>
 		<main>
 			<section class="text-block hero">
@@ -25,7 +26,8 @@
                         that boosts point-of-sale communication,
                         content production, delivery logic,
                         marketing and sales.</p>
-                    <a href="index.html" class="button">Download guide</a>
+                    <!-- onclick download visual just for fun in this case -->
+                    <a href="#" class="button" onclick="downloadPDF('hero-btn')" id="hero-btn">Download guide</a>
                 </header>
 					<img src="./assets/cover-guide.jpg" loading="lazy" alt="hero-img">
 			</section>
@@ -114,8 +116,9 @@
                     <input type="checkbox" name="policy-box" id="policy-box" required>
                     <label for="policy-box">I have read ZetaDisplays lorem ipsum dolor sit amet</label>
                 </fieldset>
-                <button type="submit" class="button">Download guide now</button>
+                <button type="submit" class="button" onclick="downloadPDF()">Download guide now</button>
             </form>
 		</footer>
+        <script src="script.js"></script>
 </body>
 </html>

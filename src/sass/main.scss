@@ -12,30 +12,64 @@ section {
 /* // Buttons */
 .button, button {
   cursor: pointer;
+  position: relative;
   border: 0;
   color: #{$color-white};
   font-weight: bold;
-  font-size: #{$font-size-sm};
+  font-size: 1.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   background-color: #{$color-primary-01};
   border-radius: #{$border-rad-regular};
-  width: fit-content;
-  padding: $padding-sm $padding-md;
+  height: 40px;
+  width: 200px;
+  padding: 0.81rem 1.8rem;
+  transition: all 0.5s ease;
 
-  &:hover {
-    color: #{$color-primary-01};
-    background-color: #{$color-black};
+  /* just for visual */
+  &:before {
+    content: "";
+    position: absolute;
+    left: 45%;
+    width: 30px;
+    height: 30px;
+    background: url(../assets/check.svg) no-repeat center;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+
+  &.success {
+    background-color: transparent;
+    font-size: 0px;
+
+    &:before {
+      transform: translate(-50%, -50%) scale(1);
+      animation: rotate-center 0.6s ease-in-out 2 both;
+      opacity: 1;
+
+    @keyframes rotate-center {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
 }
+}
 
-#site-header .button, footer form .button {
+#header-btn {
+  height: 30px;
+  width: 170px;
+}
+
+#header-btn, footer form .button {
   font-size: $font-size-xs;
 }
 
-/* // Header */
+/* Header */
 #site-header {
   height: 4.5rem;
   align-items: center;
@@ -46,11 +80,12 @@ section {
   position: sticky;
   top: 0;
   z-index: 99;
+
+  .site-logo {
+    width: 7.5rem;
+  }
 }
 
-#site-header .site-logo {
-  width: 7.5rem;
-}
 
 /** MODULES **/
 
@@ -58,7 +93,6 @@ section {
 
 h1 {
   font-size: #{$titles-h1-size};
-  font-weight: normal;
 }
 
 [class*=hero] {
@@ -79,21 +113,20 @@ h1 {
 .text-block h2, 
 #site-footer h2 {
   font-size: #{$titles-h2-size};
-  font-weight: normal;
 }
 
 .text-block {
-  --num-cols: 1;
+  $num-cols: 1;
   display: grid;
-  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-template-columns: repeat($num-cols, auto);
   gap: #{$padding-md};
 
   @media (min-width: $breakpoint-tablet ) {
-    --num-cols: 2;
-    grid-template-areas: 'article image';
+    $num-cols: 2;
+    grid-template-areas: 'header image';
 
-    article {
-      grid-area: article;
+    header {
+      grid-area: header;
     }
 
     img {
@@ -101,7 +134,7 @@ h1 {
     }
 
     &:nth-child(3n) {
-      grid-template-areas: 'image article';
+      grid-template-areas: 'image header';
     }
   }
 
@@ -135,7 +168,7 @@ h1 {
 
     dt {
       font-size: #{$titles-h3-size};
-      font-weight: 600;
+      font-weight: bold;
       color: #{$color-primary-01};
       padding-bottom: #{$padding-sm};
     }
@@ -161,20 +194,17 @@ h1 {
   
   h2 {
     font-size: #{$titles-h2-size};
-    font-weight: 400;
     text-align: center;
   }
 
   h3 {
     font-size: #{$titles-h3-size};
-    font-weight: 400;
     padding-top: #{$padding-md};
   }
 
   article {
     p {
       font-size: #{$font-size-sm};
-      font-weight: 400;
 
       &:first-of-type {
         color: #{$color-grays-60};
